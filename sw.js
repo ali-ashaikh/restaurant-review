@@ -28,6 +28,10 @@ self.addEventListener('install', function(e) {
 });
 
 
+self.addEventListener('activate',  function(e) {
+  e.waitUntil(self.clients.claim());
+});
+
 
 self.addEventListener('fetch', function(e) {
 
